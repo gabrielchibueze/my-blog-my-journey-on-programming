@@ -1,0 +1,248 @@
+body {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+}
+.upper-page {
+    grid-column: 1/end;
+    grid-row: 1/1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5rem;
+    grid-template-areas: 
+        "icon home aboutme";
+    align-items: center;
+    border:none;
+    /* border-bottom: 15px solid #ffbe0b; */
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+    text-transform: uppercase;
+    background-color:#03045e;
+}
+
+.blog1, .blog2, .blog3, .blog4, .blog5, .blog6 {
+    width: 100%;
+    border-radius: 5px;
+    height: 30vh;
+    
+}
+
+.mylogo { 
+    grid-area: icon;
+    width: 80px;
+    height: fit-content;
+    margin-left: 1rem;
+    border-radius: none;
+    cursor: pointer;
+}
+.home-page {
+    grid-area: home;
+    font-size: 0.8rem;
+    justify-self:  right;
+}
+
+.about-me-page {
+    grid-area: aboutme;
+    font-size: 0.8rem;
+    margin-left: 25px;
+    justify-self: left;
+}
+.top-page-section {
+    grid-column: 1/end;
+    grid-row: 2/2;
+    /* padding: 0.625rem; */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px 150px;
+  
+}
+.mynewJourney {
+    grid-column: 1/end;
+    grid-row: 3/3;
+    height: 30vh;
+    width: 100%;
+    border-radius: none;
+}
+.text-div {
+    padding-top: 10px;
+    grid-row: 2/2;
+    grid-column: 1/end;
+    z-index: 2;
+    margin: 0.5rem;
+    color: black;
+    font-size: 1rem;
+    width: fit-content;
+    padding-bottom: 5px;
+}
+.text-div p {
+    max-width: 90%;
+}
+
+.body-section {
+    grid-column: 1/end;
+    grid-row: 4/4;
+    margin: 1rem;
+}
+h1 {
+    font-size: 1.875rem;
+    max-width: 80%;
+    margin: 10px 0px 10px 2px;
+}
+h2 {
+    font-size: 20px;
+    margin: 5px 0px 5px 0px;
+}
+p {
+    line-height: 1.5;
+    margin: 5px 2px 5px 2px;
+
+}
+
+a {
+    text-decoration: none;
+    color: white
+}
+.read-more a {
+    color: black;
+    font-size: 30px;
+}
+
+.recent-post-section {
+    margin: 1rem;
+    grid-column: 1/end;
+    grid-row: 6/6;
+    display: grid;
+}
+
+.recent-post {
+    grid-column: 1/end;
+    grid-row: 5/5;
+    margin: 0 auto 0 auto;
+    background-color: #faa307;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+article {
+    margin: 5px 0px 5px ;
+    border-radius: 5px;
+    padding: 8px;
+
+}
+.read-more {
+    margin: 10px auto 10px auto;
+    border-bottom: #b2bcfc solid 2px;
+    cursor: pointer;
+}
+.read-list {
+    display: none;
+}
+footer {
+    grid-column: 1/end;
+    grid-row: 7/7;
+    padding: 0.625rem;
+    background-color: 03045e;
+    color: white;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    body {
+        display: grid;
+        grid-template-columns: 2rem 1fr 1fr 1fr 2rem;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+    }
+    .mynewJourney {
+        grid-column: 2/-2;
+        grid-row: 3/3;
+        width: 100%;
+        height: 50dvh;
+        border-radius: none;
+    }
+    .text-div {
+        grid-row: 2/2;
+        grid-column: 2/end;
+        padding-top: 20px;
+        margin: 1rem;
+        padding-bottom: 5px;
+    }
+    
+    .body-section {
+        grid-column: 2/-2;
+        grid-row: 4/4;
+        margin: 1rem;
+    }
+    
+    .recent-post-section {
+        margin: 1rem;
+        grid-column: 2/-2;
+        grid-row: 6/6;
+    }
+    
+    .recent-post {
+        grid-column: 1/end;
+        grid-row: 5/5;
+    }
+    .upper-page {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        grid-column: 1/7;
+       
+    }
+    footer {
+        grid-column: 1/end;
+    }
+    .mylogo { 
+        width: 120px;
+        margin-left: 5rem;
+    }
+    .home-page {
+        font-size: 1.25rem;
+        justify-self:  end;
+        margin-right: 1.25rem;
+    }
+    
+    .about-me-page {
+        font-size: 1.25rem;
+        margin-left: 30px;
+        justify-self: left;
+        margin-left: 1.25rem;
+    }
+   
+    .text-div p {
+        line-height: 1.8;
+        font-size: 1.5dvw;
+        max-width: 70%;
+
+    }
+    h1 {
+        font-size: 3dvw;
+        max-width: 80%;
+        margin: 10px 0px 10px 2px;
+    }
+    h2 {
+        font-size: 2.2dvw;
+        margin: 20px 0px 15px 0;
+    }
+    p {
+        font-size: 1.7dvw;
+        line-height: 1.5;
+        margin: 5px 2px 5px 2px;    
+    }
+    .body-section {
+        max-width: 80%;
+    }
+    .main-article {
+        display: grid;
+
+        grid-template-areas: 
+        "b6 b5 b4"
+        "b3 b2 b1";
+        grid-gap: 8px;
+    }
+    .blog1, .blog2, .blog3, .blog4, .blog5, .blog6 {
+        width: 100%;
+        height: 20dvw;
+        border-radius: 5px;
+    }
+}
